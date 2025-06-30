@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="RML-63-6F">
+    <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
+
+    <!-- Import RML-63-6F urdf file -->
+    <xacro:include filename="$(find rml_63_description)/urdf/rml_63_6fb.urdf" />
+
+    <!-- Import control_xacro -->
+    <xacro:include filename="RML-63-6F.ros2_control.xacro" />
+
+
+    <xacro:RML-63-6F_ros2_control name="FakeSystem" initial_positions_file="$(arg initial_positions_file)"/>
+
+</robot>
